@@ -1,1 +1,1 @@
-# work-calcuator
+# Work Calculator
