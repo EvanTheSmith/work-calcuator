@@ -1,0 +1,78 @@
+body { 
+    font-size: 100%;
+    background: linear-gradient(#000000, #224B83);
+    background-attachment: fixed;
+}
+
+.header-text {
+    color: rgb(63,63,63);
+    font-family: Arial;
+    font-weight: bold;
+}
+
+#wrapper {
+    min-width: 789px;
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 3px;
+}
+
+.divbox {
+    margin: 10px 10px 0px 0px;
+    border: 1px solid rgb(170,170,170);
+    background-color: rgb(228,235,242);
+    padding: 24px;
+    width: 639px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+#submit-table {
+    width: 680px;
+    text-align: center;
+}
+
+input[type="text"] {
+    height: 40px;
+    padding-left: 10px;
+}
+
+#caption {
+    font: 0.80em sans-serif;
+    text-align: center;
+}
+    
+#paste_date {
+    width: 87px;
+}
+
+#button {
+    height: 36px;
+}
+
+#flipper {
+    padding-left: 5px;
+}
+
+#copied {
+    visibility: hidden;
+    color: green;
+    font-family: Arial;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+#copied2 {
+    visibility: hidden;
+    color: green;
+    font-family: Arial;
+    font-weight: bold;
+    display: inline;
+}
+
+#flip_button {
+    height: 36px;
+    width: 32px;
+    text-align: center;
+}

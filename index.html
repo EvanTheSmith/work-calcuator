@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>SEC v WF Companion App</title>
+    <script src="price_table.js"></script>
+    <script defer src="javascript.js"></script>
+    <link rel="stylesheet" type="text/css"  href='style.css' />
+</head>
+<body>
+<div id="wrapper">
+<div class="header-text">TRADE DATE FINDER</div>
+<div class="divbox">
+<table><tr>
+<form>
+<td id="caption">
+Settlement Date:
+<br />
+<input type="date" id="settle" data-date="0"
+min="2012-11-18"
+max="2016-12-16" />
+</td>
+<td>
+<button id="button"
+onClick="findDate()">>></button>
+</td>
+<td id= "caption">
+Trade Date:
+<br/>
+<input type="date"
+id="trade" data-date="0" 
+min="2012-11-17" max="2016-12-13" />
+</td>
+<td id="copied">Copied!</td>
+</form>
+</tr>
+<tr>
+<td><form>
+<input type="text" id="paste_date" placeholder="paste date" oninput="pasteDate()">
+</form></td>
+<td colspan="2" id="flipper">
+<button title="Choose between Trade or Settlement date" id="flip button" onclick="flipper()">^</button>
+</tr></table>
+</div>
+ 
+
+<!-- Math Functionality Goes Here -->
+ 
+
+<br /><div class="header-text">CALCULATOR</div>
+<div id="calculator" class="divbox">
+<form class="times" data-memory="0" >
+<input type="text" id="box1" /> x
+<input type="text" id="box2" oninput="autoSubmit()"/>
+<input type="submit" onclick="grabBoxes('times')" />
+<input type="text" id="box3" />
+<input type="submit" title="Restore value" value="<" onclick="restoreResult()" />
+<div id="copied2">Copied!</div></form>
+<br />
+<form class="div" data-memory="0" >
+<input type="text" id="box1" /> ÷
+<input type="text" id="box2" oninput="autoSubmit()"/>
+<input type="submit" onclick="grabBoxes('div')" />
+<input type="text" id="box3" />
+<input type="submit" title="Restore value" value="<" onclick="restoreResult()" />
+<div id="copied2">Copied!</div></form>
+
+<br />
+<form class="add" data-memory="0" >
+<input type="text" id="box1" /> +
+<input type="text" id="box2" oninput="autoSubmit()"/>
+<input type="submit" onclick="grabBoxes('add')" />
+<input type="text" id="box3" />
+<input type="submit" title="Restore value" value="<" onclick="restoreResult()" />
+<div id="copied2">Copied!</div></form>
+
+<br />
+<form class="minus" data-memory="0" >
+<input type="text" id="box1" /> -
+<input type="text" id="box2" oninput="autoSubmit()"/>
+<input type="submit" onclick="grabBoxes('minus')" />
+<input type="text" id="box3" />
+<input type="submit" title="Restore value" value="<" onclick="restoreResult()" />
+<div id="copied2">Copied!</div></form>
+
+<br />
+<table id="submit-table"><tr><form>
+<td style="text-align: left;">
+<input type="submit" onClick="location.reload()" value="Refresh Page" />
+<input type="submit" onClick="checkBoxes()" value="Check Boxes" />
+</td>
+<td>
+<label for="auto-clear">Auto Clear Boxes</label>
+<input type="checkbox" id="auto-clear" name="auto-clear" value="auto-clear">
+</td>
+<td>
+<label for="auto-submit">Auto Submit Mode</label>
+<input type="checkbox" id="auto-submit" name="auto-submit" value="auto-submit">
+</td>
+</form></tr></table>
+</div>
+</div>
+</body>
+</html>
